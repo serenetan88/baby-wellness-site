@@ -1,18 +1,18 @@
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: #fdf6f0;
+    background: linear-gradient(to bottom, #fff4e6, #ffe8cc);
     margin: 0;
     padding: 20px;
 }
 
 .container {
-    max-width: 600px;
+    max-width: 700px;
     margin: auto;
-    background: #fff8f1;
+    background: #fffdf8;
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
     text-align: center;
 }
 
@@ -29,10 +29,11 @@ button {
     background: #ffa94d;
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 16px;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
+    margin-top: 10px;
     transition: background 0.3s ease;
 }
 
@@ -42,15 +43,17 @@ button:hover {
 
 .card {
     margin-top: 30px;
-    background: #fff;
+    background: #fff8f1;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 14px;
     text-align: left;
-    animation: fadeIn 0.5s ease;
+    animation: fadeIn 0.6s ease;
 }
 
-.more-info {
-    margin-top: 20px;
+.mum-corner {
+    border-top: 2px solid #ffd8a8;
+    margin-top: 40px;
+    background: #fff0e6;
 }
 
 .hidden {
@@ -58,6 +61,6 @@ button:hover {
 }
 
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
 }

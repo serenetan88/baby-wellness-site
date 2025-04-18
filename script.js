@@ -5,6 +5,14 @@ const ageRanges = [
     { min: 13, max: 24, iron: "7 mg", vitaminD: "600 IU", zinc: "3 mg", calcium: "700 mg", protein: "13 g", sleep: "11–14 hrs" }
 ];
 
+const mumTips = [
+    "Even 5 minutes of silence with tea counts as rest. Take it.",
+    "You're allowed to rest even when the dishes aren't done.",
+    "That laundry can wait. You are not a machine.",
+    "Ask for help. It's a strength, not a weakness.",
+    "You are your baby's whole world — and that's beautiful."
+];
+
 function updateAgeLabel(value) {
     document.getElementById("ageLabel").textContent = value + " months old";
 }
@@ -21,13 +29,16 @@ function showRecommendations() {
     results.innerHTML = `
         <h2>At ${age} months, here’s what your baby needs:</h2>
         <ul>
-            <li><strong>Iron:</strong> ${data.iron}</li>
-            <li><strong>Vitamin D:</strong> ${data.vitaminD}</li>
-            <li><strong>Protein:</strong> ${data.protein}</li>
-            <li><strong>Recommended Sleep:</strong> ${data.sleep}</li>
+            <li>🧠 <strong>Iron:</strong> ${data.iron}</li>
+            <li>☀️ <strong>Vitamin D:</strong> ${data.vitaminD}</li>
+            <li>💪 <strong>Protein:</strong> ${data.protein}</li>
+            <li>🛏️ <strong>Recommended Sleep:</strong> ${data.sleep}</li>
         </ul>
     `;
     document.getElementById("moreInfo").classList.remove("hidden");
+
+    const tip = mumTips[Math.floor(Math.random() * mumTips.length)];
+    document.getElementById("mumTip").innerHTML = "<strong>Self-Care Tip:</strong> " + tip;
 }
 
 function toggleDetails() {
