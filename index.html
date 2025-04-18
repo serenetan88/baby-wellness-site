@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Baby Wellness Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>How old is your little one?</h1>
+        <input type="range" id="ageInput" min="0" max="24" value="6" oninput="updateAgeLabel(this.value)">
+        <label id="ageLabel">6 months old</label>
+        <button onclick="showRecommendations()">Show Me What They Need</button>
+
+        <div id="results" class="card hidden"></div>
+
+        <div id="moreInfo" class="more-info hidden">
+            <button onclick="toggleDetails()">Show Full Nutrient Breakdown</button>
+            <div id="details" class="hidden"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
